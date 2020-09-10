@@ -1,0 +1,162 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.navbar{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .navbar div{
+   
+    /* border:red 2px solid; */
+    width: 50px;
+    height: 100%;
+    
+    margin-top: 5px;
+    margin-left: 5px;
+    
+    
+}
+.navbar ul li a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    padding: 1px;
+    padding-left:1px ;
+    padding-right: 1px;
+    margin:1px;
+    margin-left: 1px;
+
+    font-size: 1.1rem;
+}
+.navbar{
+    overflow: hidden;
+}
+.home{
+    overflow: hidden;
+}
+.services{
+    overflow: hidden;
+}
+.subscribe {
+    overflow: hidden;
+}
+.phone{
+    overflow: hidden;
+}
+.footer{
+    overflow: hidden;
+}
+
+
+.home div h1{
+    padding: 1px;
+    padding-bottom: 1px;
+    font-size: 3rem;
+    
+}
+.home div p{
+    font-size: 1.5rem;
+}
+.home{
+    text-align: center;
+    /* border: 2px black solid; */
+    margin: 50px 10px;
+    font-size: 2rem;
+    color:white;
+    
+}
+
+ 
+.home::before{
+    
+    height: 550px;
+   
+}
+.services h1{
+    font-size:3rem;
+    text-align: center; 
+    margin: 5rem;
+    
+   }
+   .subscribe div input{
+    border: solid 5px  rgb(0, 0, 0);
+     width: 10rem;
+     height: 4rem;
+     background-color: rgb(1, 204, 255);
+     border-radius: 20px;
+     color: white;
+     font-size: 2rem;
+     outline: none;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    
+ }
+   
+   .subscribe div button{
+    height: 4.7rem;
+    border: solid 5px  rgb(1, 204, 255);
+    border-radius: 20px;
+    color: white;
+    font-size: 2rem;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    left: -40px;
+    width: 10rem;
+    /* z-index: -1; */
+    cursor: pointer;
+  outline:none;
+}
+.phone form{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    /* position: relative;
+    bottom: -9rem; */
+    text-align: center;
+    
+}
+.phone .allthing input{
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 20px;
+    outline: none;
+    font-size: 1rem;
+    
+    
+   }
+   .phone .allthing textarea{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 20px;
+    outline: none;
+    font-size: .8rem;
+   }
+
+   .footer .total .fbox {
+    /* border: 2px solid rebeccapurple; */
+    width:60rem;
+    height: 300px;
+    margin-top:1px ;
+    margin-left: 5px;
+    margin-right: 5px;
+    color:white;
+  
+    font-size: 1rem;
+}
+.sabbir h2{
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+  font-size: 2rem;
+}
