@@ -17,7 +17,7 @@
     height: 100%;
     
     margin-top: 5px;
-    margin-left: 5px;
+    margin-left: 1px;
     
     
 }
@@ -31,7 +31,7 @@
     margin:1px;
     margin-left: 1px;
 
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 .navbar{
     overflow: hidden;
@@ -80,7 +80,8 @@
 .services h1{
     font-size:3rem;
     text-align: center; 
-    margin: 5rem;
+    margin: 4rem;
+    margin-top: 12rem;
     
    }
    .subscribe div input{

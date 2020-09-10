@@ -4,6 +4,7 @@
 *{
     padding:  0px;
     margin: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .navbar{
@@ -34,7 +35,7 @@
 .navbar div{
    
     /* border:red 2px solid; */
-    width: 10px;
+    width: 100px;
     height: 100%;
     
     margin-top: 10px;
