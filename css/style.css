@@ -1,329 +1,232 @@
-/* :root{
- 
-} */
+/* CSS Reset */
 *{
-    padding:  0px;
-    margin: 0px;
-    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar{
-  display: flex;
+html{
+    scroll-behavior: smooth;
 }
-.navbar::before{
-    position: absolute;
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
     content: "";
-    background-color: rgb(1, 87, 90);
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('../bg1.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* Clients Section */
+#client-section{ 
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url('../bg.jpg');
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.3;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 124px;
+}
+
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 0.8;
-    
-    
-}
-.navbar{
-    position: relative;
-}
-.navbar ul{
-    display: flex;
-    list-style: none;
-}
-.navbar ul li{
-    padding: 10px;
-    
-}
-.navbar div{
-   
-    /* border:red 2px solid; */
-    width: 100px;
-    height: 100%;
-    
-    margin-top: 10px;
-    margin-left: 10px;
-    
-    
-}
-.navbar div img{
-    width: 100%;
-}
-.navbar ul li a{
-    display: flex;
-    color: white;
-    text-decoration: none;
-    padding: 5px;
-    padding-left:20px ;
-    padding-right: 20px;
-    margin:10px;
-    margin-left: 20px;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
 
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
     font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
 }
-.navbar ul li a:hover{
-  background-color: white;
-  color: black;
-  border-radius: 20px;
- 
-}
-.home{
+
+.center{
     text-align: center;
-    /* border: 2px black solid; */
-    margin: 50px 200px;
-    font-size: 2rem;
-    color:white;
-    
-}
-.home::before{
-    content: "";
-    background: url('https://source.unsplash.com/user/erondu/1600x900') no-repeat center center/cover;
-    position: absolute;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    height: 800px;
-    z-index: -2;
-    opacity: 0.9;
-}
-
-.home {
-    display: flex;
-    justify-content: center;
-    align-items:center ;
-    margin-top: 10rem;
-    margin-bottom: 25rem;
-}
-.home div h1{
-    padding: 20px;
-    padding-bottom: 50px;
-    font-size: 4rem;
-    
-}
-.home div p{
-    font-size: 2rem;
-}
-.services h1{
- font-size: 5rem;
- text-align: center; 
- margin: 5rem;
- 
-}
-.services .all{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.services .all .box{
-   
-    border: 2px solid white;
-    width: 25rem;
-    height: 20rem;
-    margin: 4rem;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 30px black ;
-    cursor: pointer;
-}
-.services .all .box:hover{
-   
-    border: 2px solid white;
-    width: 25rem;
-    height: 20rem;
-    margin: 4rem;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 50px black ;
-}
-.services .all .box{
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-}
-.services .all .box h2{
-   
-    font-size: 2.5rem;
-    text-shadow: rgb(7, 7, 7) 1px 2px  7px;
-}
-.services .all .box .part{
-    border: 2px solid white;
-    width: 12rem;
-    height: 12rem;
-    /* background-color: rgb(255, 255, 255); */
-    text-align: center;
-    font-size: 3rem;
-    /* box-shadow: black 0px 0px 20px; */
-    
-    
-}
-.services .all .box .part:hover{
-    /* border: 2px solid white; */
-    width: 18rem;
-    height: 18rem;
-    /* background-color: rgb(255, 255, 255); */
-    text-align: center;
-    font-size: 3rem;
-    /* box-shadow: black 0px 0px 50px; */
-    
-    
-}
-.services .all .box .part {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.services .all .box .part .logopegon img{
-    width: 100%;
-    height: 100%;
-}
-.services .biglogo{
-    display: flex;
-  justify-content: center;
-  margin-top: 5rem;
-  flex-wrap: wrap;
-  
-
-}
-
-.subscribe div{
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    align-items: center;
-
-}
-/* .subscribe::before{
- 
-    content: "";
-    position: absolute;
-    background: url('../img/video.mp4') center center/cover;
-    width: 100%;
-      height: 100%;
-z-index: -3;
-} */
-
-.subscribe div{
-   margin-top: 150px; 
-}
-.subscribe div input{
-   border: solid 5px  rgb(0, 0, 0);
-    width: 60rem;
-    height: 4rem;
-    background-color: rgb(1, 204, 255);
-    border-radius: 20px;
-    color: white;
-    font-size: 2rem;
-    outline: none;
-   text-align: center;
-   position: relative;
-   z-index: 1;
-   
-}
-.subscribe div button{
-    height: 4.7rem;
-    border: solid 5px  rgb(1, 204, 255);
-    border-radius: 20px;
-    color: white;
-    font-size: 2rem;
-    background-color: rgb(0, 0, 0);
-    position: relative;
-    left: -40px;
-    width: 20rem;
-    /* z-index: -1; */
-    cursor: pointer;
-  outline:none;
-}
-.subscribe div input:hover{
-   border: solid 5px black;
-   background-color: rgb(1, 204, 255);
-   padding: 1rem;
-   transition: 1s;
-   border-radius: 40px;
-}
-.subscribe div button:hover{
-    background-color: black ;
-    border: solid 5px rgb(1, 204, 255);  
-    height: 6rem;
-    transition: 1s;
-    border-radius: 40px;
-}
-.phone{
-  margin-top: 10rem;
-}
-.phone::before{
-    content: "";
-    background: url('../img/phone.jpg') center center/cover;
-    position: absolute;
-    width: 100%;
-    height: 1000px;
-    z-index: -3;
-}
-.phone h2{
-    margin-top: 2rem;
-
- text-align: center;
- font-size: 4rem;
- margin-bottom: 5rem;
- /* position: relative;
- bottom: -4rem; */
-}
-.phone form{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    /* position: relative;
-    bottom: -9rem; */
-    
-}
-.phone .allthing input{
- padding-left: 13rem;
- padding-right: 13rem;
- padding-top: 1rem;
- padding-bottom: 1rem;
- border-radius: 20px;
- outline: none;
- font-size: 2rem;
-}
-.phone .allthing textarea{
-    padding-left: 6rem;
-    padding-right: 6rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-radius: 20px;
-    outline: none;
-    font-size: 1.6rem;
-   }
- .footer{
-     margin-top: 10rem;
-   width: 100%;
-   background-color:rgb(27, 25, 25) ;
-   height:500px;
-   }
-.footer .tbox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.footer .total {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.footer .total .fbox {
-    /* border: 2px solid rebeccapurple; */
-    width:60rem;
-    height: 300px;
-    margin-top:50px ;
-    margin-left: 50px;
-    margin-right: 50px;
-    color:white;
-  
-    font-size: 1.5rem;
-}
-.footer .total #fbox-2{
-    text-align: left;
-}
-.sabbir h2{
-    color: white;
-    text-align: center;
-    padding-top: 100px;
-  font-size: 2.5rem;
 }
